@@ -10,6 +10,7 @@ interface listProps {
 	statusHandler: (stat: statusOpt) => void;
 	deleteHandler: (id: string) => void;
 	clearHandler: () => void;
+	pendings: number;
 }
 
 export default function ListTodo(props: listProps) {
@@ -55,7 +56,7 @@ export default function ListTodo(props: listProps) {
 				);
 			})}
 			<div className="todo todo-container flex flex-sb">
-				<p className="todo__time">5 minutes left</p>
+				<p className="todo__time">{`${props.pendings} taks left`}</p>
 				<div className="todo__extra flex flex-c">
 					<BottomStatus statusHandler={props.statusHandler} />
 				</div>

@@ -76,8 +76,7 @@ function App() {
 	const clearHandler = () => {
 		setTodos((prevTodo) => {
 			let newTodo = [...prevTodo];
-			newTodo.filter((todo) => todo.completed === false);
-			return newTodo;
+			return newTodo.filter((todo) => todo.completed === false);
 		});
 	};
 
@@ -98,6 +97,9 @@ function App() {
 				statusHandler={statusHandler}
 				deleteHandler={deleteHandler}
 				clearHandler={clearHandler}
+				pendings={
+					todos.filter((todo) => todo.completed === false).length
+				}
 			/>
 			<div className="lowest container">
 				<div className="todo container flex flex-c">
