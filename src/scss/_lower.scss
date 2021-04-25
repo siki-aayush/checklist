@@ -1,0 +1,34 @@
+.lower {
+	margin-top: -31px;
+	
+	.todo:not(:last-child) {
+		border-bottom: 1px solid $dark_grayish_blue;
+	}
+		.todo:first-child {
+			border-top-left-radius: 6px;
+			border-top-right-radius: 6px;
+		}
+		
+		.todo:last-child {
+			color: $dark_grayish_blue;
+			border-bottom-left-radius: 6px;
+			border-bottom-right-radius: 6px;
+			font-size: 16px;
+
+			p:hover {
+				color: $light_grayish_blue;
+				cursor: pointer;
+			}
+	}
+
+	.todo__extra {
+		p {
+			padding: 0 10px;
+		}
+
+		@include breakpoint-down("small") {
+			display: none;
+		}
+	}
+
+}

@@ -1,0 +1,50 @@
+.upper {
+	background-image: url('/images/bg-mobile-dark.jpg');
+	background-size: cover;
+	height: 225px;
+
+	@include breakpoint-up(large) {
+		background-image: url('/images/bg-desktop-dark.jpg');
+		height: 362px;
+
+	}
+
+	&__title {
+		padding-top: 52px;
+		padding-bottom: 42px;
+		
+		@include breakpoint-up(large) {
+			padding-top: 90px;
+			padding-bottom: 55px;
+		}
+	}
+	
+	&__text {
+		letter-spacing: 12px;
+		font-size: 24px;
+		color: white;
+		
+		@include breakpoint-up(large) {
+			letter-spacing: 25px;
+			font-size: 38px;
+		}
+	}
+	
+	&__icon {
+		width: 20px;
+		height: 20px;
+		
+		@include breakpoint-up('large') {
+			width: 34px;
+			height: 34px;
+		}
+	}
+
+	&__input {
+		border-radius: 6px;
+	}
+
+	.todo {
+		border-radius: 6px;
+	}
+}
