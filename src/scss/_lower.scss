@@ -33,6 +33,11 @@
 		}
 	}
 
+	.checked {
+		text-decoration: line-through;
+		color: $dark_grayish_blue;
+	}
+
 }
 
 .light-mode {
@@ -40,6 +45,7 @@
 		.todo:not(:last-child) {
 			border-bottom: 1px solid $very_light_grayish_blue;
 		}
+
 		.todo:last-child {
 			color: $dark_grayish_blue_light;
 
@@ -47,6 +53,10 @@
 				color: $very_dark_grayish_blue_light;
 				cursor: pointer;
 			}
+		}
+
+		.checked {
+			color: $light_grayish_blue_light;
 		}
 	}
 }

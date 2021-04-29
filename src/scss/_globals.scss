@@ -173,12 +173,7 @@ form {
 		}
 		input[type="checkbox"]:checked + label::after {
 			opacity: 1;
-		}
-
-		input[type="checkbox"]:checked + .todo__content {
-			text-decoration: line-through;
-		}
-		
+		}	
 	}
 
 	&__checkbox {

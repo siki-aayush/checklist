@@ -1,3 +1,4 @@
+import { PassThrough } from "node:stream";
 import React from "react";
 import { todoState, statusOpt } from "../App";
 import BottomStatus from "./BottomStatus";
@@ -38,7 +39,13 @@ export default function ListTodo(props: listProps) {
 								</div>
 							</div>
 						</div>
-						<p className="todo__content">{todo.note}</p>
+						<p
+							className={`todo__content + ${
+								todo.completed ? "checked" : ""
+							}`}
+						>
+							{todo.note}
+						</p>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="18"
