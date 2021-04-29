@@ -16,7 +16,7 @@ body {
 	background-color: $very_dark_blue;
 
 	@include breakpoint-up(large) {
-		font-size: 22px;
+		font-size: 20px;
 	}
 }
 
@@ -62,7 +62,7 @@ input, textarea {
 	border: 0;
 
 	@include breakpoint-up(large) {
-		font-size: 22px;
+		font-size: 20px;
 	}
 }
 
@@ -231,12 +231,16 @@ form {
 		&__round {
 			label {
 				border: 1px solid $very_light_grayish_blue;
-			}			
+			}
+			
+			label:hover {
+				border: 1px solid $dark_grayish_blue_light;
+			}
 		}
 	
 		&__cross:hover {
 			path {
-				fill: $light_grayish_blue_hover;
+				fill: $very_dark_blue;
 			}
 		}
 	}
