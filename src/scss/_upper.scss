@@ -29,7 +29,7 @@
 			font-size: 38px;
 		}
 	}
-	
+
 	&__icon {
 		width: 28px;
 		height: 28px;
@@ -52,12 +52,17 @@
 		transform: scale(1.05);
 	}
 
-	&__input {
+	&__input, textarea {
 		border-radius: 6px;
 	}
 
 	.todo {
 		border-radius: 6px;
+	}
+
+	.todo__content {
+		padding-top: 17px;
+		padding-bottom: 10px;
 	}
 
 }

@@ -9,6 +9,14 @@ interface createProps {
 
 export default function CreateTodo(props: createProps) {
 	const [newNote, setNewNote] = useState<string>("");
+
+	const onEnterPress = (e: any) => {
+		if (e.keyCode === 13 && e.shiftKey === false) {
+			e.preventDefault();
+			let temp: HTMLInputElement = document.querySelector("#helloworld")!;
+			temp.click();
+		}
+	};
 	return (
 		<div className="upper">
 			<div className="container">
@@ -44,18 +52,31 @@ export default function CreateTodo(props: createProps) {
 							props.createHandler(newNote);
 							setNewNote("");
 						}}
+						id="upperform"
 					>
-						<input
+						{/* <input
 							className="todo__content upper__input"
-							type="text"
+							type="textarea"
 							value={newNote}
 							onChange={(evnt) => {
 								setNewNote(evnt.target.value);
 							}}
+						/> */}
+						<textarea
+							id="testing"
+							className="todo__content upper__input"
+							value={newNote}
+							onChange={(evnt) => {
+								setNewNote(evnt.target.value);
+							}}
+							form="upperform"
+							onKeyDown={onEnterPress}
+							style={{ resize: "none" }}
 						/>
 						<div className="todo__cb-container">
 							<div className="todo__round">
 								<input
+									id="checkbox"
 									type="checkbox"
 									className="todo__checkbox"
 								/>
@@ -65,6 +86,11 @@ export default function CreateTodo(props: createProps) {
 								></label>
 							</div>
 						</div>
+						<input
+							type="submit"
+							id="helloworld"
+							style={{ display: "none" }}
+						/>
 					</form>
 				</div>
 			</div>
