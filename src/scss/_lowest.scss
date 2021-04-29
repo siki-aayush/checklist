@@ -1,6 +1,7 @@
 .lowest {
     margin-top: 14px;
     font-size: 16px;
+    font-weight: $dark;
 
     .todo {
         color: $dark_grayish_blue;
@@ -20,4 +21,16 @@
         display: none;
     }
 
+}
+
+.light-mode {
+    .lowest {
+        .todo {
+            color: $dark_grayish_blue_light;
+        }
+    
+        p:hover {
+            color: $very_dark_grayish_blue_light;
+        }
+    }    
 }

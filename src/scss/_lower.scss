@@ -14,6 +14,7 @@
 			border-bottom-left-radius: 6px;
 			border-bottom-right-radius: 6px;
 			font-size: 16px;
+			min-height: 59px;
 
 			p:hover {
 				color: $light_grayish_blue;
@@ -22,6 +23,7 @@
 	}
 
 	.todo__extra {
+		font-weight: $dark;
 		p {
 			padding: 0 10px;
 		}
@@ -31,4 +33,20 @@
 		}
 	}
 
+}
+
+.light-mode {
+	.lower {
+		.todo:not(:last-child) {
+			border-bottom: 1px solid $very_light_grayish_blue;
+		}
+		.todo:last-child {
+			color: $dark_grayish_blue_light;
+
+			p:hover {
+				color: $very_dark_grayish_blue_light;
+				cursor: pointer;
+			}
+		}
+	}
 }

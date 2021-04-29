@@ -16,10 +16,15 @@ export enum statusOpt {
 	active = "active",
 	completed = "completed",
 }
+export enum themes {
+	light = "light",
+	dark = "dark",
+}
 
 function App() {
 	const [todos, setTodos] = useState<todoState>([]);
 	const [status, setStatus] = useState<statusOpt>(statusOpt.all);
+	const [theme, setTheme] = useState<themes>(themes.light);
 
 	useEffect(() => {
 		statusHandler(statusOpt.all);
@@ -80,6 +85,13 @@ function App() {
 		});
 	};
 
+	const themeChangeHandler = () => {
+		document
+			.getElementsByTagName("body")[0]
+			?.classList.toggle("light-mode");
+		theme === themes.light ? setTheme(themes.dark) : setTheme(themes.light);
+	};
+
 	let visibleTodos: todoState = todos;
 
 	if (status === statusOpt.active) {
@@ -90,7 +102,11 @@ function App() {
 
 	return (
 		<div className="App">
-			<CreateTodo createHandler={createTodoHandler} />
+			<CreateTodo
+				createHandler={createTodoHandler}
+				themeChangeHandler={themeChangeHandler}
+				theme={theme}
+			/>
 			<ListTodo
 				todos={visibleTodos}
 				completeHandler={completeHandler}

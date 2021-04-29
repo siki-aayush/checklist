@@ -5,7 +5,7 @@
 
 	@include breakpoint-up(large) {
 		background-image: url('/images/bg-desktop-dark.jpg');
-		height: 362px;
+		height: 322px;
 
 	}
 
@@ -31,13 +31,25 @@
 	}
 	
 	&__icon {
-		width: 20px;
-		height: 20px;
+		width: 28px;
+		height: 28px;
+		cursor: pointer;
 		
 		@include breakpoint-up('large') {
-			width: 34px;
-			height: 34px;
+			width: 42px;
+			height: 42px;
 		}
+
+		path {
+			transform: scale(0.9);
+			transition: all 200ms;
+
+		}
+		
+	}
+	
+	&__icon:hover path {
+		transform: scale(1.05);
 	}
 
 	&__input {
@@ -47,4 +59,16 @@
 	.todo {
 		border-radius: 6px;
 	}
+
+}
+
+.light-mode {
+	.upper {
+		background-image: url('../images/bg-mobile-light.jpg');
+	
+		@include breakpoint-up(large) {
+			background-image: url('../images/bg-desktop-light.jpg');
+		}
+	}
+
 }
