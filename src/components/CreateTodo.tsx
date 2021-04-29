@@ -76,14 +76,11 @@ export default function CreateTodo(props: createProps) {
 						<div className="todo__cb-container">
 							<div className="todo__round">
 								<input
-									id="checkbox"
+									id="upper_checkbox"
 									type="checkbox"
 									className="todo__checkbox"
 								/>
-								<label
-									htmlFor="checkbox"
-									className="checked"
-								></label>
+								<label htmlFor="upper_checkbox"></label>
 							</div>
 						</div>
 						<input
