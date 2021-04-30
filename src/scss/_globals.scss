@@ -186,11 +186,11 @@ form {
 		right: 20px;
 		color: white;
 		cursor: pointer;
-		opacity: 0;
 		
 		@include breakpoint-up(large) {
 			top: 28px;
 			right: 30px;
+			opacity: 0;
 		}
 
 		path {

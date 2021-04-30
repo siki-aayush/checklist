@@ -1,10 +1,11 @@
 .upper {
-	background-image: url('/images/bg-mobile-dark.jpg');
-	background-size: cover;
+	background-image: url('../images/bg-dark.jpg');
 	height: 240px;
+	background-position-y: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 
 	@include breakpoint-up(large) {
-		background-image: url('/images/bg-desktop-dark.jpg');
 		height: 322px;
 
 	}
@@ -71,11 +72,7 @@
 
 .light-mode {
 	.upper {
-		background-image: url('../images/bg-mobile-light.jpg');
-	
-		@include breakpoint-up(large) {
-			background-image: url('../images/bg-desktop-light.jpg');
-		}
+		background-image: url('../images/bg-light.jpg');
 	}
 
 }
