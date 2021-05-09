@@ -100,6 +100,24 @@ function App() {
 		visibleTodos = todos.filter((todo) => todo.completed === true);
 	}
 
+	const swapEl = (source: number, dest: number | undefined) => {
+		let sourceId: string, destId: string;
+		if (dest !== undefined) {
+			sourceId = visibleTodos[source].id;
+			destId = visibleTodos[dest].id;
+			setTodos((prevTodo) => {
+				let newTodo = [...prevTodo];
+				let temp: todo;
+				source = newTodo.findIndex((todo) => todo.id === sourceId);
+				dest = newTodo.findIndex((todo) => todo.id === destId);
+				temp = newTodo[source];
+				newTodo[source] = newTodo[dest];
+				newTodo[dest] = temp;
+				return newTodo;
+			});
+		}
+	};
+
 	return (
 		<div className="App">
 			<CreateTodo
@@ -113,6 +131,7 @@ function App() {
 				statusHandler={statusHandler}
 				deleteHandler={deleteHandler}
 				clearHandler={clearHandler}
+				swapEl={swapEl}
 				pendings={
 					todos.filter((todo) => todo.completed === false).length
 				}
