@@ -99,7 +99,7 @@ form {
 		padding-left: 60px;
 		padding-right: 48px;
 		font-weight: $med;
-		min-width: 700px;
+		width: 100%;
 
 		@include breakpoint-up(large) {
 			padding-left: 80px;
