@@ -37,6 +37,10 @@
 		@include breakpoint-down("small") {
 			display: none;
 		}
+
+		&:hover {
+    		transform: rotate(90deg);
+		}
 	}
 
 	.checked {

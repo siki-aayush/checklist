@@ -195,13 +195,15 @@ form {
 		}
 
 		path {
-			transition: all 50ms;
+			transform-origin: center;
+			transition: all 400ms;
 		}
 	}
 
 	&__cross:hover {
 		path {
 			fill: $light_grayish_blue_hover;
+    		transform: rotate(90deg);
 		}
 	}
 	
