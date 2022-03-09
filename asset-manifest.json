@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/siki-aayush/checklist/static/css/main.80de9be2.chunk.css",
+    "main.js": "/siki-aayush/checklist/static/js/main.433d82f7.chunk.js",
+    "main.js.map": "/siki-aayush/checklist/static/js/main.433d82f7.chunk.js.map",
+    "runtime-main.js": "/siki-aayush/checklist/static/js/runtime-main.898bcff6.js",
+    "runtime-main.js.map": "/siki-aayush/checklist/static/js/runtime-main.898bcff6.js.map",
+    "static/js/2.cd05ccdd.chunk.js": "/siki-aayush/checklist/static/js/2.cd05ccdd.chunk.js",
+    "static/js/2.cd05ccdd.chunk.js.map": "/siki-aayush/checklist/static/js/2.cd05ccdd.chunk.js.map",
+    "index.html": "/siki-aayush/checklist/index.html",
+    "static/css/main.80de9be2.chunk.css.map": "/siki-aayush/checklist/static/css/main.80de9be2.chunk.css.map",
+    "static/js/2.cd05ccdd.chunk.js.LICENSE.txt": "/siki-aayush/checklist/static/js/2.cd05ccdd.chunk.js.LICENSE.txt",
+    "static/media/style.scss": "/siki-aayush/checklist/static/media/bg-light.e5881a57.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.898bcff6.js",
+    "static/js/2.cd05ccdd.chunk.js",
+    "static/css/main.80de9be2.chunk.css",
+    "static/js/main.433d82f7.chunk.js"
+  ]
+}
